@@ -21,7 +21,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `SEC4_LeExemploOficial_Retorna14DespesasNaOrdemDoArquivo` passa e `dotnet build` conclui sem warnings. O teste lê `exemplos/despesas-exemplo.json` e confere colaborador, competência e 14 despesas.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-002** — Arredondamento bancário na leitura (passo 1 da seção 8)
+- [X] **T-002** — Arredondamento bancário na leitura (passo 1 da seção 8)
   - **Atende:** RN-009, AMB-012
   - **Aceite:** `RN009_33333_Vira3333`, `RN009_Empate10125_Vira1012`, `RN009_Empate10135_Vira1014` e `AMB012_D011_ValorSolicitadoEh3333` passam.
   - **Commit:** `<hash preenchido depois>`
