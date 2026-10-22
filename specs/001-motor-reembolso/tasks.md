@@ -28,7 +28,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
 
 ## Fase 2 — Regras de negócio por item
 
-- [ ] **T-003** — Valor negativo (passo 2)
+- [X] **T-003** — Valor negativo (passo 2)
   - **Atende:** RN-002, AMB-017
   - **Aceite:** `RN002_D009Negativo_RecusadoComZero`, `RN002_D009_NaoAlteraSaldoNemTotalDosOutros` e `AMB017_EstornoRecusado_ApenasOItem` passam.
   - **Commit:** `<hash preenchido depois>`
