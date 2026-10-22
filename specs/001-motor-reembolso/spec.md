@@ -277,8 +277,8 @@ entrada, com `status`, `justificativa` e `regras`.
 
 **Texto original do RH:** "Hospedagem tem limite de R$ 250 por diária."
 **O que não está claro:** o limite vale por diária (com o número de diárias do lançamento) ou por lançamento.
-**Decisão:** o limite de 250,00 vale por diária, e a diária conta o número de noites. Entretanto, prevalece a AMB-015: cada lançamento é uma única diária, e a quantidade escrita na descrição é ignorada. Assim, d-010 (480,00) paga 250,00.
-**Justificativa:** a diária de hospedagem conta noites, e o lançamento individual por noite (AMB-015, AMB-024) evita inferir a quantidade do texto.
+**Decisão:** O limite de 250,00 vale por lançamento, e cada lançamento de hospedagem equivale a uma diária (AMB-015). Quantidades de noites ou diárias na descrição são ignoradas. Assim, d-010 (480,00) paga 250,00.
+**Justificativa:** A descrição é texto livre e não confiável; o lançamento individual por diária (AMB-015, AMB-024) evita inferir a quantidade.
 **Regra afetada:** RN-008
 
 ### AMB-005 — Nota fiscal: a qual valor se aplica
