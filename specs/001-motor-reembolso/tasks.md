@@ -38,7 +38,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `RN001_D014Maiuscula_NormalizadaParaAlimentacao`, `AMB013_AcentoCaixaEEspacosNasPontas_Normalizados`, `AMB013_EspacoOuHifenEntrePalavras_EquivaleASublinhado`, `AMB018_D005Coworking_RecusadoComZero` e `RN001_CategoriaNaoReconhecida_RecusadaComAlertaDeAnaliseHumana` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-005** — Período de competência (passo 4)
+- [X] **T-005** — Período de competência (passo 4)
   - **Atende:** RN-003, AMB-011, AMB-016
   - **Aceite:** `RN003_D008ForaDaCompetencia_EmRevisaoComZero`, `RN003_D014UltimoDiaDoMes_Dentro`, `RN003_PrimeiroDiaDoMes_Dentro`, `AMB011_ComparaPorAnoEMesDaCompetencia` e `AMB016_ComparaPelaDataDaDespesa` passam.
   - **Commit:** `<hash preenchido depois>`
