@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-003 — Saldo independente por dia e categoria · `2026-10-22`
+
+**Gatilho:** Revisão de lacunas: cálculo manual feito só com a spec.
+
+**O que mudou na spec:** RN-007 e AMB-001: saldos independentes por (dia, categoria), sem transferência.
+
+**Por quê:** A redação anterior deixava aberto se o saldo era acumulado ou compartilhado.
+
+**O que isso invalidou:** Nada (ainda não há código nem tasks).
+
+**Tasks afetadas:** Nenhuma.
+
+**Custo:** 1 arquivo (spec.md).
+
+---
+
 ## D-002 — Competência compara AAAA-MM · `2026-10-22`
 
 **Gatilho:** Revisão de lacunas: cálculo manual feito só com a spec.

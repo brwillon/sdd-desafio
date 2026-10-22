@@ -193,7 +193,9 @@ Sem d-010 e sem d-013, `viagem` é falso, e d-014 sozinha paga 60,00. Com d-013 
 início de cada dia e categoria, o saldo é o limite aplicável (60,00 e 80,00, ou
 90,00 e 120,00 em viagem, conforme RN-006). As despesas que chegam a este passo
 são processadas na ordem do arquivo. Cada uma recebe o menor valor entre o
-solicitado e o saldo restante, e esse valor é abatido do saldo. Valor igual ao
+solicitado e o saldo restante, e esse valor é abatido do saldo. Cada par (dia,
+categoria) tem saldo próprio e independente: alimentação e transporte urbano não
+compartilham saldo, e o saldo não passa de um dia para outro. Valor igual ao
 limite é pago integralmente. O excedente é cortado. Se o saldo restante for 0,
 o item fica `recusado` com 0,00. Fim de semana, feriado e plantão não alteram o
 limite. Café da manhã de hotel é alimentação como qualquer outra.
@@ -255,7 +257,7 @@ entrada, com `status`, `justificativa` e `regras`.
 
 **Texto original do RH:** "Alimentação tem limite de R$ 60 por dia." / "Transporte urbano tem limite de R$ 80 por dia."
 **O que não está claro:** o teto vale para a soma da categoria no dia, ou para cada despesa individualmente.
-**Decisão:** o teto vale para a soma da categoria no dia. Os pares d-001/d-002 e d-006/d-007 são limitados ao teto diário, e o par d-003/d-004 também.
+**Decisão:** o teto vale para a soma da categoria no dia. Os pares d-001/d-002 e d-006/d-007 são limitados ao teto diário, e o par d-003/d-004 também. Cada par (dia, categoria) tem saldo próprio e independente: alimentação e transporte urbano não compartilham saldo, e o saldo não passa de um dia para outro.
 **Justificativa:** a política não fala em limite por refeição, mas em limite diário.
 **Regra afetada:** RN-007
 
