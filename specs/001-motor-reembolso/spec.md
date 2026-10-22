@@ -145,7 +145,9 @@ total de nenhuma outra despesa.
 ### RN-003 — Período de competência
 
 **Regra:** a data da despesa deve cair no mês indicado em `competencia`. A despesa
-fora do mês fica `em_revisao`, e o revisor humano decide a aprovação ou rejeição.
+fora do mês fica `em_revisao`, e o revisor humano decide a aprovação ou rejeição. A data cai no mês quando o ano e o
+mês da data são iguais aos de `competencia` (AAAA-MM). O primeiro e o último dia do
+mês estão dentro.
 **Origem:** política do RH, item 7
 **Aceite:** d-008 (2026-04-15, competência 2026-07) fica `em_revisao` com 0,00.
 d-014 (2026-07-31) está dentro do período.
@@ -333,7 +335,7 @@ entrada, com `status`, `justificativa` e `regras`.
 
 **Texto original do RH:** "Despesas devem ser lançadas dentro do período de competência."
 **O que não está claro:** a referência do período são os campos `inicio`/`fim` (inclusivos ou exclusivos) ou o campo `competencia`.
-**Decisão:** a fonte é o campo `competencia` (por exemplo, "2026-07") e não `inicio`/`fim`. Se os dois divergirem, não há regra definida (seção 10).
+**Decisão:** a fonte é o campo `competencia` (por exemplo, "2026-07") e não `inicio`/`fim`. Se os dois divergirem, não há regra definida (seção 10). A comparação é por ano e mês.
 **Justificativa:** o reembolso está atrelado à competência informada.
 **Regra afetada:** RN-003
 

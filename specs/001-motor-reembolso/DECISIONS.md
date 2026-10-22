@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-002 — Competência compara AAAA-MM · `2026-10-22`
+
+**Gatilho:** Revisão de lacunas: cálculo manual feito só com a spec.
+
+**O que mudou na spec:** RN-003 e AMB-011: critério de "cair no mês" passa a ser igualdade de ano e mês.
+
+**Por quê:** Era uma suposição do implementador; sem isso o teste de d-014 (31/07) não tem base na spec.
+
+**O que isso invalidou:** Nada (ainda não há código nem tasks).
+
+**Tasks afetadas:** Nenhuma.
+
+**Custo:** 1 arquivo (spec.md).
+
+---
+
 ## D-001 — AMB-004 sem contradição · `2026-10-22`
 
 **Gatilho:** Revisão de lacunas: cálculo manual feito só com a spec.
