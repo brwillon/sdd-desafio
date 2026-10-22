@@ -34,16 +34,19 @@ Se o que eu pedi não está coberto por nenhuma task, me avise em vez de impleme
 
 ## Stack e comandos
 
-- Linguagem: `<...>`
-- Rodar: `<comando>`
-- Testes: `<comando>`
-- Lint/format: `<comando>`
+- Linguagem: `C# 13 / .NET 9`
+- Rodar: `dotnet run --project src/Reembolso.Cli -- calcular --input exemplos/despesas-exemplo.json --output resultado.json`
+- Testes: `dotnet test`
+- Lint/format: `dotnet format --verify-no-changes` (aplicar: `dotnet format`)
 
 ## Convenções de código
 
-- `<nomenclatura, estrutura de pastas, tratamento de erro, o que for relevante>`
-- Valores monetários: `<como são representados — decimal, centavos em inteiro, etc.>`
+- Solução `Reembolso.sln`: `src/Reembolso.Core` (regras puras, sem I/O; um tipo por passo da precedência da seção 8), `src/Reembolso.Cli` (único projeto com I/O), `tests/Reembolso.Tests` (xUnit).
+- Testes nomeados `RN007_Cenario_Resultado` e `AMB001_...`, para fechar a rastreabilidade.
+- Valores monetários: `decimal`, nunca `double`/`float`. Arredondamento com `Math.Round(v, 2, MidpointRounding.ToEven)`.
+- Nullable habilitado e `TreatWarningsAsErrors` ligado.
+- JSON com `System.Text.Json`, propriedades na ordem da seção 4 da spec e números com 2 casas.
 
 ## Fora de escopo
 
-- `<o que este projeto explicitamente não faz — evita que o agente invente feature>`
+- Pagamento, conversão de moeda, mais de um colaborador por arquivo, estornos e detecção de refeição com cliente (spec seção 3).
