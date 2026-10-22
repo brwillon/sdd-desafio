@@ -16,7 +16,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
 
 ## Fase 1 — Fundação
 
-- [ ] **T-001** — Solução, CLI e leitura do JSON de entrada (seção 4)
+- [X] **T-001** — Solução, CLI e leitura do JSON de entrada (seção 4)
   - **Atende:** seção 4 (entrada)
   - **Aceite:** `SEC4_LeExemploOficial_Retorna14DespesasNaOrdemDoArquivo` passa e `dotnet build` conclui sem warnings. O teste lê `exemplos/despesas-exemplo.json` e confere colaborador, competência e 14 despesas.
   - **Commit:** `<hash preenchido depois>`
