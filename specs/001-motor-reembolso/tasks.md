@@ -33,7 +33,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `RN002_D009Negativo_RecusadoComZero`, `RN002_D009_NaoAlteraSaldoNemTotalDosOutros` e `AMB017_EstornoRecusado_ApenasOItem` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-004** — Normalização e validação da categoria (passo 3)
+- [X] **T-004** — Normalização e validação da categoria (passo 3)
   - **Atende:** RN-001, AMB-013, AMB-018
   - **Aceite:** `RN001_D014Maiuscula_NormalizadaParaAlimentacao`, `AMB013_AcentoCaixaEEspacosNasPontas_Normalizados`, `AMB013_EspacoOuHifenEntrePalavras_EquivaleASublinhado`, `AMB018_D005Coworking_RecusadoComZero` e `RN001_CategoriaNaoReconhecida_RecusadaComAlertaDeAnaliseHumana` passam.
   - **Commit:** `<hash preenchido depois>`
