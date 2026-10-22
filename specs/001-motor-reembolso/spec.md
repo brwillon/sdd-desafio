@@ -137,7 +137,8 @@ com 61,00. d-005 (`coworking`) fica `recusado` com 0,00.
 ### RN-002 — Valor negativo
 
 **Regra:** despesa com valor negativo é dado inválido e fica `recusado`. Os
-demais itens do arquivo são processados normalmente.
+demais itens do arquivo são processados normalmente. A justificativa do item é
+"Valor negativo é dado inválido." e `regras` contém `RN-002`.
 **Origem:** decisão desta spec (a política não trata valores negativos)
 **Aceite:** d-009 (−45,00) fica `recusado` com 0,00 e não altera o saldo nem o
 total de nenhuma outra despesa.

@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-004 — Justificativa do valor negativo · `2026-10-22`
+
+**Gatilho:** Implementação da T-003: a RN-002 não definia o texto da justificativa, que vai para a saída (seção 4).
+
+**O que mudou na spec:** RN-002: a justificativa do item recusado passa a ser "Valor negativo é dado inválido." e `regras` contém `RN-002`.
+
+**Por quê:** O texto tinha sido escolhido no código; regra de saída não pode viver só no código (CLAUDE.md). Fixá-la na spec torna o teste verificável.
+
+**O que isso invalidou:** Nada. O código da T-003 já usa esse texto.
+
+**Tasks afetadas:** T-003 (sem mudança de aceite).
+
+**Custo:** 1 arquivo (spec.md).
+
+---
+
 ## D-003 — Saldo independente por dia e categoria · `2026-10-22`
 
 **Gatilho:** Revisão de lacunas: cálculo manual feito só com a spec.
