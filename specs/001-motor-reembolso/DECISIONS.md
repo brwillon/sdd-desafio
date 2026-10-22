@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-005 — Alerta e registro de regra na normalização de categoria · `2026-10-22`
+
+**Gatilho:** Testes da T-003/T-004: a RN-001 não definia o conteúdo do alerta de categoria não reconhecida nem se `RN-001` consta em `regras` dos itens reconhecidos.
+
+**O que mudou na spec:** RN-001: o alerta da categoria não reconhecida contém "análise humana"; a categoria informada é mantida na saída; `regras` contém `RN-001` em toda despesa que passa pelo passo, reconhecida ou não.
+
+**Por quê:** O exemplo da seção 4 já lista `RN-001` em itens aprovados (d-001, d-002), e o texto do alerta precisava de um critério verificável pelo teste.
+
+**O que isso invalidou:** Nada. O código da T-004 ainda não foi escrito; `ItemAvaliado` ganhará `Categoria` e `Alertas`.
+
+**Tasks afetadas:** T-004 (sem mudança de aceite).
+
+**Custo:** 1 arquivo de spec (spec.md) e este log.
+
+---
+
 ## D-004 — Justificativa do valor negativo · `2026-10-22`
 
 **Gatilho:** Implementação da T-003: a RN-002 não definia o texto da justificativa, que vai para a saída (seção 4).

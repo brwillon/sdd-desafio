@@ -129,7 +129,9 @@ Antes de comparar, a categoria informada é normalizada: ignora-se caixa, acento
 espaços nas pontas, e espaço ou hífen entre palavras equivale a sublinhado. Se,
 após a normalização, a categoria for igual a uma das três, ela é usada com esse
 nome. Qualquer outra categoria torna a despesa `recusado`, com alerta de
-encaminhamento para análise humana.
+encaminhamento para análise humana (o texto do alerta contém "análise humana") e
+a categoria informada é mantida na saída. `regras` contém `RN-001` em toda despesa
+que passa por este passo, reconhecida ou não.
 **Origem:** política do RH, item 9
 **Aceite:** d-014 (`ALIMENTACAO`) é tratada como `alimentacao` e fica `aprovado`
 com 61,00. d-005 (`coworking`) fica `recusado` com 0,00.
