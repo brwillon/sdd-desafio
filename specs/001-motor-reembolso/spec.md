@@ -150,7 +150,8 @@ total de nenhuma outra despesa.
 **Regra:** a data da despesa deve cair no mês indicado em `competencia`. A despesa
 fora do mês fica `em_revisao`, e o revisor humano decide a aprovação ou rejeição. A data cai no mês quando o ano e o
 mês da data são iguais aos de `competencia` (AAAA-MM). O primeiro e o último dia do
-mês estão dentro.
+mês estão dentro. O valor reembolsável do item em revisão é 0,00 e `regras`
+contém `RN-003`.
 **Origem:** política do RH, item 7
 **Aceite:** d-008 (2026-04-15, competência 2026-07) fica `em_revisao` com 0,00.
 d-014 (2026-07-31) está dentro do período.

@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-006 — Registro de regra e valor do item fora da competência · `2026-10-22`
+
+**Gatilho:** Testes da T-005: a RN-003 não definia o valor reembolsável do item em revisão (só o exemplo d-008) nem se `RN-003` consta em `regras`.
+
+**O que mudou na spec:** RN-003: o item fora da competência fica `em_revisao` com valor reembolsável 0,00 e `regras` contém `RN-003`. A RN-003 não define alerta nem justificativa específicos.
+
+**Por quê:** O teste precisa de um critério verificável, e o valor 0,00 e a regra já aparecem no aceite e na seção 4; fixá-los evita que vivam só no código (CLAUDE.md).
+
+**O que isso invalidou:** Nada. O código da T-005 ainda não foi escrito.
+
+**Tasks afetadas:** T-005 (sem mudança de aceite).
+
+**Custo:** 1 arquivo de spec (spec.md) e este log.
+
+---
+
 ## D-005 — Alerta e registro de regra na normalização de categoria · `2026-10-22`
 
 **Gatilho:** Testes da T-003/T-004: a RN-001 não definia o conteúdo do alerta de categoria não reconhecida nem se `RN-001` consta em `regras` dos itens reconhecidos.
