@@ -52,7 +52,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
 
 - [ ] **T-007** — Duplicatas e itens em revisão (passo 6)
   - **Atende:** RN-005, RN-010, AMB-007, AMB-008
-  - **Aceite:** `RN005_D006D007_EmRevisaoComAlertaCitandoOsDoisIds`, `RN005_D001D002FornecedoresDiferentes_NaoFormamGrupo`, `RN005_D003D004ValoresDiferentes_NaoFormamGrupo`, `RN005_GrupoDeTres_TodosEmRevisaoComAlertaCitandoOsTres`, `RN010_EmRevisao_NaoConsomeSaldoDiario`, `AMB007_CriterioEhDataCategoriaFornecedorEValor` e `SEC8_IguaisSemNotaAcima100_AmbasRecusadasPorRN004` passam.
+  - **Aceite:** `RN005_D006D007_EmRevisaoComAlertaCitandoOsDoisIds`, `RN005_D001D002FornecedoresDiferentes_NaoFormamGrupo`, `RN005_D003D004ValoresDiferentes_NaoFormamGrupo`, `RN005_GrupoDeTres_TodosEmRevisaoComAlertaCitandoOsTres`, `RN005_SoOFornecedorDiferente_NaoFormaGrupo`, `RN005_ItemNaoAtivo_NaoParticipaDoGrupo`, `RN010_DuplicataEmRevisao_ZeraValorReembolsavel`, `AMB007_CriterioEhDataCategoriaFornecedorEValor` e `SEC8_IguaisSemNotaAcima100_AmbasRecusadasPorRN004` passam.
   - **Commit:** `<hash preenchido depois>`
 
 - [ ] **T-008** — Caracterização de viagem (passo 7)
@@ -62,7 +62,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
 
 - [ ] **T-009** — Limite diário de alimentação e transporte urbano (passo 8)
   - **Atende:** RN-007, AMB-001, AMB-002, AMB-003, AMB-010, AMB-019, AMB-022, AMB-023
-  - **Aceite:** `RN007_D001D002EmViagem_Pagam7250E1750`, `RN007_D001D002SemViagem_Pagam6000E0Recusado`, `RN007_D003Sozinha_Paga80`, `RN007_D014Sozinha_Paga60`, `RN007_ArquivoCompleto_D003Paga100_D011Paga3333_D012Paga4720_D014Paga6100`, `RN006_Viagem_AmpliaLimitesDeAlimentacaoETransporte`, `AMB001_SaldoPorDiaECategoria_NaoPorDespesa`, `AMB001_AlimentacaoETransporteNaoCompartilhamSaldo`, `AMB001_SaldoNaoPassaDeUmDiaParaOutro`, `AMB002_CorteSegueAOrdemDoArquivo`, `AMB003_PagaOLimiteECortaOExcedente`, `AMB010_AlimentacaoIgualAoLimite60_PagaIntegral`, `AMB019_D012Sabado_SemTratamentoEspecial`, `AMB022_D001AlmocoComCliente_AprovadoNormalmente` e `AMB023_D011CafeDaManha_EntraNoLimiteDeAlimentacao` passam.
+  - **Aceite:** `RN007_D001D002EmViagem_Pagam7250E1750`, `RN007_D001D002SemViagem_Pagam6000E0Recusado`, `RN007_D003Sozinha_Paga80`, `RN007_D014Sozinha_Paga60`, `RN007_ArquivoCompleto_D003Paga100_D011Paga3333_D012Paga4720_D014Paga6100`, `RN010_EmRevisao_NaoConsomeSaldoDiario`, `RN006_Viagem_AmpliaLimitesDeAlimentacaoETransporte`, `AMB001_SaldoPorDiaECategoria_NaoPorDespesa`, `AMB001_AlimentacaoETransporteNaoCompartilhamSaldo`, `AMB001_SaldoNaoPassaDeUmDiaParaOutro`, `AMB002_CorteSegueAOrdemDoArquivo`, `AMB003_PagaOLimiteECortaOExcedente`, `AMB010_AlimentacaoIgualAoLimite60_PagaIntegral`, `AMB019_D012Sabado_SemTratamentoEspecial`, `AMB022_D001AlmocoComCliente_AprovadoNormalmente` e `AMB023_D011CafeDaManha_EntraNoLimiteDeAlimentacao` passam.
   - **Commit:** `<hash preenchido depois>`
 
 - [ ] **T-010** — Limite de hospedagem por lançamento (passo 8)
@@ -116,12 +116,12 @@ exatamente a matriz que a correção vai montar.
 | RN-002 | T-003 | `RN002_D009Negativo_RecusadoComZero`, `RN002_D009_NaoAlteraSaldoNemTotalDosOutros` |
 | RN-003 | T-005 | `RN003_D008ForaDaCompetencia_EmRevisaoComZero`, `RN003_D014UltimoDiaDoMes_Dentro`, `RN003_PrimeiroDiaDoMes_Dentro` |
 | RN-004 | T-006 | `RN004_D003Exato100SemNota_NaoExigeNota`, `RN004_D004_10001SemNota_Recusado`, `RN004_D013_690SemNota_Recusado` |
-| RN-005 | T-007 | `RN005_D006D007_EmRevisaoComAlertaCitandoOsDoisIds`, `RN005_D001D002FornecedoresDiferentes_NaoFormamGrupo`, `RN005_D003D004ValoresDiferentes_NaoFormamGrupo`, `RN005_GrupoDeTres_TodosEmRevisaoComAlertaCitandoOsTres` |
+| RN-005 | T-007 | `RN005_D006D007_EmRevisaoComAlertaCitandoOsDoisIds`, `RN005_D001D002FornecedoresDiferentes_NaoFormamGrupo`, `RN005_D003D004ValoresDiferentes_NaoFormamGrupo`, `RN005_GrupoDeTres_TodosEmRevisaoComAlertaCitandoOsTres`, `RN005_SoOFornecedorDiferente_NaoFormaGrupo`, `RN005_ItemNaoAtivo_NaoParticipaDoGrupo` |
 | RN-006 | T-008, T-009 | `RN006_ArquivoCompleto_ViagemVerdadeiro`, `RN006_SemD010ESemD013_ViagemFalso`, `RN006_D013UnicaHospedagem_ViagemFalsoPoisRecusada`, `RN006_Viagem_AmpliaLimitesDeAlimentacaoETransporte` |
 | RN-007 | T-009 | `RN007_D001D002EmViagem_Pagam7250E1750`, `RN007_D001D002SemViagem_Pagam6000E0Recusado`, `RN007_D003Sozinha_Paga80`, `RN007_D014Sozinha_Paga60`, `RN007_ArquivoCompleto_D003Paga100_D011Paga3333_D012Paga4720_D014Paga6100` |
 | RN-008 | T-010 | `RN008_D010_Paga250ECorta230`, `RN008_D013TresNoites_RecusadaPorRN004AntesDoLimite` |
 | RN-009 | T-002 | `RN009_33333_Vira3333`, `RN009_Empate10125_Vira1012`, `RN009_Empate10135_Vira1014` |
-| RN-010 | T-007, T-011 | `RN010_EmRevisao_NaoConsomeSaldoDiario`, `RN010_RecusadoEEmRevisao_ValorReembolsavelEhZero`, `RN010_EmRevisao_NaoEntraNoTotal` |
+| RN-010 | T-007, T-009, T-011 | `RN010_DuplicataEmRevisao_ZeraValorReembolsavel`, `RN010_EmRevisao_NaoConsomeSaldoDiario`, `RN010_RecusadoEEmRevisao_ValorReembolsavelEhZero`, `RN010_EmRevisao_NaoEntraNoTotal` |
 | RN-011 | T-011 | `RN011_ArquivoCompleto_TotalReembolsavelEh58153`, `RN011_ArquivoCompleto_Resumo7Aprovado4Recusado3EmRevisao`, `RN011_ArquivoCompleto_14ItensNaOrdemDaEntrada`, `RN011_TodoItemTemJustificativaEReferenciaRNExistente` |
 | AMB-001 | T-009 | `AMB001_SaldoPorDiaECategoria_NaoPorDespesa`, `AMB001_AlimentacaoETransporteNaoCompartilhamSaldo`, `AMB001_SaldoNaoPassaDeUmDiaParaOutro` |
 | AMB-002 | T-009 | `AMB002_CorteSegueAOrdemDoArquivo` |
