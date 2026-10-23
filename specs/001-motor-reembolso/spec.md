@@ -204,7 +204,9 @@ categoria) tem saldo próprio e independente: alimentação e transporte urbano 
 compartilham saldo, e o saldo não passa de um dia para outro. Valor igual ao
 limite é pago integralmente. O excedente é cortado. Se o saldo restante for 0,
 o item fica `recusado` com 0,00. Fim de semana, feriado e plantão não alteram o
-limite. Café da manhã de hotel é alimentação como qualquer outra.
+limite. Café da manhã de hotel é alimentação como qualquer outra. Item já `recusado` ou
+`em_revisao` em passo anterior não chega a este passo: não consome saldo e mantém
+situação, valor e `regras`, sem receber `RN-007`.
 **Origem:** política do RH, itens 1, 2 e 4
 **Aceite:** no arquivo completo (viagem, limites 90,00 e 120,00):
 d-001 paga 72,50 e d-002 paga 17,50, num total de 90,00. d-003 paga 100,00.

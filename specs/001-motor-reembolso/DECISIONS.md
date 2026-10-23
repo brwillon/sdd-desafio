@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-008 — RN-007 só avalia itens ativos · `2026-10-23`
+
+**Gatilho:** Revisão dos testes da T-009: nenhum teste do aceite provava que um item já `recusado` (por exemplo, pela RN-004) não consome o saldo diário; a RN-007 só dizia "as despesas que chegam a este passo" e a regra geral estava apenas na seção 8.
+
+**O que mudou na spec:** RN-007: item já `recusado` ou `em_revisao` em passo anterior não consome saldo e mantém situação, valor e `regras`, sem receber `RN-007`. Teste novo `RN007_ItemRecusadoAntes_NaoConsomeSaldoDiario`, incluído no aceite da T-009.
+
+**Por quê:** Mesmo raciocínio da D-007: a seção 8 já afirma o comportamento; fixá-lo na regra o torna verificável por teste em vez de viver só no código (CLAUDE.md).
+
+**O que isso invalidou:** Nada. O código da T-009 ainda não foi escrito.
+
+**Tasks afetadas:** T-009 (aceite ganha 1 teste).
+
+**Custo:** 2 arquivos de spec (spec.md, tasks.md) e este log, mais o teste.
+
+---
+
 ## D-007 — RN-004 só avalia itens ativos · `2026-10-23`
 
 **Gatilho:** Revisão dos testes da T-006: a RN-004 não dizia o que acontece com um item sem nota acima de 100,00 que já saiu do fluxo (`recusado` ou `em_revisao`) em passo anterior. O teste correspondente refletia o padrão do código da T-005, não a spec.
