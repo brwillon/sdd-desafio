@@ -1,1 +1,1 @@
-return 0;
+return Reembolso.Cli.Programa.Executar(args);
