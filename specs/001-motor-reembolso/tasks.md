@@ -65,7 +65,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `RN007_D001D002EmViagem_Pagam7250E1750`, `RN007_D001D002SemViagem_Pagam6000E0Recusado`, `RN007_D003Sozinha_Paga80`, `RN007_D014Sozinha_Paga60`, `RN007_ArquivoCompleto_D003Paga100_D011Paga3333_D012Paga4720_D014Paga6100`, `RN010_EmRevisao_NaoConsomeSaldoDiario`, `RN007_ItemRecusadoAntes_NaoConsomeSaldoDiario`, `RN006_Viagem_AmpliaLimitesDeAlimentacaoETransporte`, `AMB001_SaldoPorDiaECategoria_NaoPorDespesa`, `AMB001_AlimentacaoETransporteNaoCompartilhamSaldo`, `AMB001_SaldoNaoPassaDeUmDiaParaOutro`, `AMB002_CorteSegueAOrdemDoArquivo`, `AMB003_PagaOLimiteECortaOExcedente`, `AMB010_AlimentacaoIgualAoLimite60_PagaIntegral`, `AMB019_D012Sabado_SemTratamentoEspecial`, `AMB022_D001AlmocoComCliente_AprovadoNormalmente` e `AMB023_D011CafeDaManha_EntraNoLimiteDeAlimentacao` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-010** — Limite de hospedagem por lançamento (passo 8)
+- [X] **T-010** — Limite de hospedagem por lançamento (passo 8)
   - **Atende:** RN-008, AMB-004, AMB-015, AMB-024
   - **Aceite:** `RN008_D010_Paga250ECorta230`, `RN008_D013TresNoites_RecusadaPorRN004AntesDoLimite`, `AMB004_LimiteDe250EhPorLancamento`, `AMB010_Hospedagem250Exato_PagaIntegral`, `AMB015_DescricaoComDuasDiarias_ContaComoUma` e `AMB024_DiariasLancadasEmDatasDistintas_CadaUmaLimitadaA250` passam.
   - **Commit:** `<hash preenchido depois>`
