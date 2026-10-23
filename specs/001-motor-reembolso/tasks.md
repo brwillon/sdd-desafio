@@ -82,7 +82,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `SEC4_SaidaJson_PropriedadesNaOrdemDaSecao4E2CasasDecimais`, `SEC9_ArquivoCompleto_ItensAprovadosERecusadosConformeCriterios`, `SEC9_DuasExecucoesComAMesmaEntrada_GeramBytesIdenticos` e `SEC9_CliCalcular_ExemploOficial_GeraArquivoDeSaida` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-013** — README e matriz de cobertura
+- [X] **T-013** — README e matriz de cobertura
   - **Atende:** rastreabilidade (todas as RN e AMB)
   - **Aceite:** `TRACE_TodaRNeAMBDaSpecApareceEmTasks` e `TRACE_CoberturaCitaApenasTestesExistentes` passam. O primeiro lê `spec.md` e `tasks.md`. O segundo confere a tabela "Cobertura" contra os testes do assembly.
   - **Commit:** `<hash preenchido depois>`
