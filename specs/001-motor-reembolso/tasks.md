@@ -72,7 +72,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
 
 ## Fase 4 — Saída e CLI
 
-- [ ] **T-011** — Totalização, justificativa, regras e alertas na saída (passo 9)
+- [X] **T-011** — Totalização, justificativa, regras e alertas na saída (passo 9)
   - **Atende:** RN-011, RN-010, seção 4 (saída)
   - **Aceite:** `RN011_ArquivoCompleto_TotalReembolsavelEh58153`, `RN011_ArquivoCompleto_Resumo7Aprovado4Recusado3EmRevisao`, `RN011_ArquivoCompleto_14ItensNaOrdemDaEntrada`, `RN011_TodoItemTemJustificativaEReferenciaRNExistente`, `RN010_RecusadoEEmRevisao_ValorReembolsavelEhZero`, `RN010_EmRevisao_NaoEntraNoTotal` e `SEC4_SubconjuntoD001D002D004D010_BateComSaidaDaSpec` passam.
   - **Commit:** `<hash preenchido depois>`
