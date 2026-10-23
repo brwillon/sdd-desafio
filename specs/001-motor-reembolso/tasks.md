@@ -43,7 +43,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `RN003_D008ForaDaCompetencia_EmRevisaoComZero`, `RN003_D014UltimoDiaDoMes_Dentro`, `RN003_PrimeiroDiaDoMes_Dentro`, `AMB011_ComparaPorAnoEMesDaCompetencia` e `AMB016_ComparaPelaDataDaDespesa` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-006** — Nota fiscal obrigatória acima de 100,00 (passo 5)
+- [X] **T-006** — Nota fiscal obrigatória acima de 100,00 (passo 5)
   - **Atende:** RN-004, AMB-005, AMB-009, AMB-021
   - **Aceite:** `RN004_D003Exato100SemNota_NaoExigeNota`, `RN004_D004_10001SemNota_Recusado`, `RN004_D013_690SemNota_Recusado`, `AMB005_NotaVerificadaPeloValorIndividualAntesDoCorte`, `AMB009_AcimaDe100EhEstrito` e `AMB021_SemNota_RecusaTotalSemPagamentoParcial` passam.
   - **Commit:** `<hash preenchido depois>`
