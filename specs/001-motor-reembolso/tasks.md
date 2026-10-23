@@ -55,7 +55,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `RN005_D006D007_EmRevisaoComAlertaCitandoOsDoisIds`, `RN005_D001D002FornecedoresDiferentes_NaoFormamGrupo`, `RN005_D003D004ValoresDiferentes_NaoFormamGrupo`, `RN005_GrupoDeTres_TodosEmRevisaoComAlertaCitandoOsTres`, `RN005_SoOFornecedorDiferente_NaoFormaGrupo`, `RN005_ItemNaoAtivo_NaoParticipaDoGrupo`, `RN010_DuplicataEmRevisao_ZeraValorReembolsavel`, `AMB007_CriterioEhDataCategoriaFornecedorEValor` e `SEC8_IguaisSemNotaAcima100_AmbasRecusadasPorRN004` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-008** — Caracterização de viagem (passo 7)
+- [X] **T-008** — Caracterização de viagem (passo 7)
   - **Atende:** RN-006, AMB-006, AMB-014
   - **Aceite:** `RN006_ArquivoCompleto_ViagemVerdadeiro`, `RN006_SemD010ESemD013_ViagemFalso`, `RN006_D013UnicaHospedagem_ViagemFalsoPoisRecusada`, `AMB014_HospedagemEmRevisao_NaoCaracterizaViagem` e `AMB006_LimiarDeNotaEHospedagemNaoMudamEmViagem` passam.
   - **Commit:** `<hash preenchido depois>`
