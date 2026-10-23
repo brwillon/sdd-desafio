@@ -24,6 +24,7 @@ public sealed class CategoriaNormalizada
             {
                 Situacao = Situacao.Recusado,
                 ValorReembolsavel = 0m,
+                Justificativa = "Categoria fora da política de reembolso.",
                 Regras = item.Regras.Add("RN-001"),
                 Alertas = item.Alertas.Add("Categoria não reconhecida: encaminhar para análise humana.")
             };

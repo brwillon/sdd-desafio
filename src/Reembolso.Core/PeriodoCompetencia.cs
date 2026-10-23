@@ -18,6 +18,7 @@ public sealed class PeriodoCompetencia
         {
             Situacao = Situacao.EmRevisao,
             ValorReembolsavel = 0m,
+            Justificativa = "Despesa fora da competência; aguarda revisão humana.",
             Regras = item.Regras.Add("RN-003")
         };
     }

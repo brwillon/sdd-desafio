@@ -16,10 +16,17 @@ public sealed class LimiteHospedagemDiaria
         if (item.Situacao != Situacao.Ativo || item.Categoria != "hospedagem")
             return item;
 
+        var pago = Math.Min(item.Despesa.Valor, LimitePorDiaria);
+        var justificativa = pago < item.Despesa.Valor
+            ? $"Lançamento conta como uma diária; limite de {Moeda.Formatar(LimitePorDiaria)}; excedente cortado."
+            : $"Lançamento conta como uma diária; dentro do limite de {Moeda.Formatar(LimitePorDiaria)}.";
+
         return item with
         {
             Situacao = Situacao.Aprovado,
-            ValorReembolsavel = Math.Min(item.Despesa.Valor, LimitePorDiaria)
+            ValorReembolsavel = pago,
+            Justificativa = justificativa,
+            Regras = item.Regras.Add("RN-008")
         };
     }
 }

@@ -19,6 +19,7 @@ public sealed class NotaFiscalObrigatoria
         {
             Situacao = Situacao.Recusado,
             ValorReembolsavel = 0m,
+            Justificativa = "Valor acima de 100,00 sem nota fiscal.",
             Regras = item.Regras.Add("RN-004")
         };
     }

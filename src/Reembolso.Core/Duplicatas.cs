@@ -27,6 +27,7 @@ public sealed class Duplicatas
         {
             Situacao = Situacao.EmRevisao,
             ValorReembolsavel = 0m,
+            Justificativa = "Possível duplicata; aguarda revisão humana.",
             Regras = item.Regras.Add("RN-005"),
             Alertas = item.Alertas.Add(alerta)
         };

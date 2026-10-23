@@ -35,10 +35,26 @@ public sealed class LimiteDiario
         var pago = Math.Min(item.Despesa.Valor, saldo);
         saldos[chave] = saldo - pago;
 
+        var nome = item.Categoria == "alimentacao" ? "alimentação" : "transporte urbano";
+        var justificativa = pago switch
+        {
+            0m => $"Saldo diário de {nome} esgotado (limite {Moeda.Formatar(limite.Value)}).",
+            _ when pago < item.Despesa.Valor =>
+                $"Restava {Moeda.Formatar(saldo)} do saldo diário de {Moeda.Formatar(limite.Value)}; excedente cortado.",
+            _ => viagem
+                ? $"Dentro do saldo diário de {nome} (limite {Moeda.Formatar(limite.Value)} em viagem)."
+                : $"Dentro do saldo diário de {nome} (limite {Moeda.Formatar(limite.Value)})."
+        };
+        var regras = viagem
+            ? item.Regras.Add("RN-006").Add("RN-007")
+            : item.Regras.Add("RN-007");
+
         return item with
         {
             Situacao = pago > 0m ? Situacao.Aprovado : Situacao.Recusado,
-            ValorReembolsavel = pago
+            ValorReembolsavel = pago,
+            Justificativa = justificativa,
+            Regras = regras
         };
     }
 
