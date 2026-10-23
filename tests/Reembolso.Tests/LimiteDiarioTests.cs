@@ -27,7 +27,6 @@ public class LimiteDiarioTests
         Assert.Equal(60.00m, Reembolsavel(resultado, "d-001"));
         Assert.Equal(0m, Reembolsavel(resultado, "d-002"));
         Assert.Equal(Situacao.Recusado, Item(resultado, "d-002").Situacao);
-        Assert.Contains("RN-007", Item(resultado, "d-002").Regras);
     }
 
     [Fact]
@@ -74,6 +73,24 @@ public class LimiteDiarioTests
         Assert.Equal(Situacao.EmRevisao, Item(resultado, "d-a").Situacao);
         Assert.Equal(Situacao.EmRevisao, Item(resultado, "d-b").Situacao);
         Assert.Equal(50.00m, Reembolsavel(resultado, "d-c"));
+    }
+
+    [Fact]
+    public void RN007_ItemRecusadoAntes_NaoConsomeSaldoDiario()
+    {
+        // d-a (100,01 sem nota) é recusado pela RN-004 antes do passo 8 e vem primeiro no arquivo.
+        var contexto = Contexto(
+            Item("d-a", Dia, "transporte_urbano", 100.01m, "TaxiApp", temNota: false),
+            Item("d-b", Dia, "transporte_urbano", 80m, "TaxiApp"));
+
+        var resultado = Aplicar(new NotaFiscalObrigatoria().Aplicar(contexto));
+
+        var recusado = Item(resultado, "d-a");
+        Assert.Equal(Situacao.Recusado, recusado.Situacao);
+        Assert.Equal(0m, recusado.ValorReembolsavel);
+        Assert.Contains("RN-004", recusado.Regras);
+        Assert.DoesNotContain("RN-007", recusado.Regras);
+        Assert.Equal(80.00m, Reembolsavel(resultado, "d-b"));
     }
 
     [Fact]
@@ -162,7 +179,6 @@ public class LimiteDiarioTests
         var item = Item(resultado, "d-a");
         Assert.Equal(60.00m, item.ValorReembolsavel);
         Assert.Equal(Situacao.Aprovado, item.Situacao);
-        Assert.Contains("RN-007", item.Regras);
     }
 
     [Fact]
