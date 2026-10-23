@@ -77,7 +77,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `RN011_ArquivoCompleto_TotalReembolsavelEh58153`, `RN011_ArquivoCompleto_Resumo7Aprovado4Recusado3EmRevisao`, `RN011_ArquivoCompleto_14ItensNaOrdemDaEntrada`, `RN011_TodoItemTemJustificativaEReferenciaRNExistente`, `RN010_RecusadoEEmRevisao_ValorReembolsavelEhZero`, `RN010_EmRevisao_NaoEntraNoTotal` e `SEC4_SubconjuntoD001D002D004D010_BateComSaidaDaSpec` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-012** — Saída JSON, determinismo e ponta a ponta (seção 9)
+- [X] **T-012** — Saída JSON, determinismo e ponta a ponta (seção 9)
   - **Atende:** seção 4 (saída), seção 9
   - **Aceite:** `SEC4_SaidaJson_PropriedadesNaOrdemDaSecao4E2CasasDecimais`, `SEC9_ArquivoCompleto_ItensAprovadosERecusadosConformeCriterios`, `SEC9_DuasExecucoesComAMesmaEntrada_GeramBytesIdenticos` e `SEC9_CliCalcular_ExemploOficial_GeraArquivoDeSaida` passam.
   - **Commit:** `<hash preenchido depois>`
