@@ -60,7 +60,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
   - **Aceite:** `RN006_ArquivoCompleto_ViagemVerdadeiro`, `RN006_SemD010ESemD013_ViagemFalso`, `RN006_D013UnicaHospedagem_ViagemFalsoPoisRecusada`, `AMB014_HospedagemEmRevisao_NaoCaracterizaViagem` e `AMB006_LimiarDeNotaEHospedagemNaoMudamEmViagem` passam.
   - **Commit:** `<hash preenchido depois>`
 
-- [ ] **T-009** — Limite diário de alimentação e transporte urbano (passo 8)
+- [X] **T-009** — Limite diário de alimentação e transporte urbano (passo 8)
   - **Atende:** RN-007, AMB-001, AMB-002, AMB-003, AMB-010, AMB-019, AMB-022, AMB-023
   - **Aceite:** `RN007_D001D002EmViagem_Pagam7250E1750`, `RN007_D001D002SemViagem_Pagam6000E0Recusado`, `RN007_D003Sozinha_Paga80`, `RN007_D014Sozinha_Paga60`, `RN007_ArquivoCompleto_D003Paga100_D011Paga3333_D012Paga4720_D014Paga6100`, `RN010_EmRevisao_NaoConsomeSaldoDiario`, `RN007_ItemRecusadoAntes_NaoConsomeSaldoDiario`, `RN006_Viagem_AmpliaLimitesDeAlimentacaoETransporte`, `AMB001_SaldoPorDiaECategoria_NaoPorDespesa`, `AMB001_AlimentacaoETransporteNaoCompartilhamSaldo`, `AMB001_SaldoNaoPassaDeUmDiaParaOutro`, `AMB002_CorteSegueAOrdemDoArquivo`, `AMB003_PagaOLimiteECortaOExcedente`, `AMB010_AlimentacaoIgualAoLimite60_PagaIntegral`, `AMB019_D012Sabado_SemTratamentoEspecial`, `AMB022_D001AlmocoComCliente_AprovadoNormalmente` e `AMB023_D011CafeDaManha_EntraNoLimiteDeAlimentacao` passam.
   - **Commit:** `<hash preenchido depois>`
