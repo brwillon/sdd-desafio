@@ -13,7 +13,7 @@ public sealed record ItemAvaliado(
 {
     public static ItemAvaliado De(Despesa despesa) =>
         new(
-            despesa,
+            despesa with { Valor = Arredondamento.Aplicar(despesa.Valor) },
             despesa.Categoria,
             Situacao.Ativo,
             0m,
