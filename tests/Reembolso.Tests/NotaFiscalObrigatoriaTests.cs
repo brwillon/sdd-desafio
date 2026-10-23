@@ -50,26 +50,26 @@ public class NotaFiscalObrigatoriaTests
     public void AMB005_NotaVerificadaPeloValorIndividualAntesDoCorte()
     {
         // Dois itens de 60,00 no mesmo dia somam 120,00, mas cada um está abaixo do limiar.
-        var soma = Aplicar(
+        // A ordem em relação ao corte (passo 8) só é observável no pipeline completo (T-011).
+        var resultado = Aplicar(
             Despesa("d-a", "alimentacao", 60m, temNota: false),
             Despesa("d-b", "alimentacao", 60m, temNota: false));
 
-        Assert.All(soma, i => Assert.Equal(Situacao.Ativo, i.Situacao));
-
-        // 150,00 sem nota é recusado, embora o limite diário de 60,00 pagasse menos que 100,00.
-        var individual = Aplicar(Despesa("d-c", "alimentacao", 150m, temNota: false)).Single();
-
-        Assert.Equal(Situacao.Recusado, individual.Situacao);
-        Assert.Equal(0m, individual.ValorReembolsavel);
+        Assert.All(resultado, i => Assert.Equal(Situacao.Ativo, i.Situacao));
     }
 
-    [Theory]
-    [InlineData(100.00, Situacao.Ativo)]
-    [InlineData(100.01, Situacao.Recusado)]
-    [InlineData(99.99, Situacao.Ativo)]
-    public void AMB009_AcimaDe100EhEstrito(double valor, Situacao esperado)
+    public static TheoryData<decimal, Situacao> LimiarDeNota => new()
     {
-        var resultado = Aplicar(Despesa("d-x", "alimentacao", (decimal)valor, temNota: false)).Single();
+        { 99.99m, Situacao.Ativo },
+        { 100.00m, Situacao.Ativo },
+        { 100.01m, Situacao.Recusado },
+    };
+
+    [Theory]
+    [MemberData(nameof(LimiarDeNota))]
+    public void AMB009_AcimaDe100EhEstrito(decimal valor, Situacao esperado)
+    {
+        var resultado = Aplicar(Despesa("d-x", "alimentacao", valor, temNota: false)).Single();
 
         Assert.Equal(esperado, resultado.Situacao);
     }
@@ -94,7 +94,7 @@ public class NotaFiscalObrigatoriaTests
     }
 
     [Fact]
-    public void RN004_ItemJaEmRevisao_NaoEhAlterado()
+    public void RN004_ItemNaoAtivo_MantemSituacaoESemRegraRN004()
     {
         var despesa = Despesa("d-x", "alimentacao", 150m, temNota: false);
         var item = ItemAvaliado.De(despesa) with { Situacao = Situacao.EmRevisao, Regras = ["RN-003"] };

@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-007 — RN-004 só avalia itens ativos · `2026-10-23`
+
+**Gatilho:** Revisão dos testes da T-006: a RN-004 não dizia o que acontece com um item sem nota acima de 100,00 que já saiu do fluxo (`recusado` ou `em_revisao`) em passo anterior. O teste correspondente refletia o padrão do código da T-005, não a spec.
+
+**O que mudou na spec:** RN-004: a regra só avalia itens ainda ativos; item já `recusado` ou `em_revisao` mantém situação, valor e `regras`, sem receber `RN-004`. O item recusado pela regra tem `regras` contendo `RN-004`.
+
+**Por quê:** A seção 8 afirma que item recusado ou em revisão não participa dos passos seguintes; fixar isso na RN-004 mantém a primeira causa de saída como a registrada e torna o comportamento verificável pelo teste, em vez de viver só no código (CLAUDE.md).
+
+**O que isso invalidou:** Nada. O código da T-006 ainda não foi escrito.
+
+**Tasks afetadas:** T-006 (sem mudança de aceite).
+
+**Custo:** 1 arquivo de spec (spec.md) e este log.
+
+---
+
 ## D-006 — Registro de regra e valor do item fora da competência · `2026-10-22`
 
 **Gatilho:** Testes da T-005: a RN-003 não definia o valor reembolsável do item em revisão (só o exemplo d-008) nem se `RN-003` consta em `regras`.

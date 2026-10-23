@@ -162,7 +162,9 @@ d-014 (2026-07-31) está dentro do período.
 `recusado` com valor 0,00, mesmo que o limite permitisse pagar algo. Até R$ 100,00
 inclusive, a nota é dispensada. A verificação usa o valor de cada despesa
 individualmente, antes de qualquer corte por limite, e o limiar de R$ 100,00 não
-muda em viagem.
+muda em viagem. A regra só avalia itens ainda ativos: item já `recusado` ou
+`em_revisao` por passo anterior mantém situação, valor e `regras`, sem receber
+`RN-004`. O item recusado por esta regra tem `regras` contendo `RN-004`.
 **Origem:** política do RH, item 5
 **Aceite:** d-003 (100,00, sem nota) não é recusada por falta de nota. d-004
 (100,01, sem nota) fica `recusado`. d-013 (690,00, sem nota) fica `recusado`.
