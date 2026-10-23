@@ -50,7 +50,7 @@ As tasks seguem a ordem da precedência da seção 8 da spec.
 
 ## Fase 3 — Regras que dependem de outros itens
 
-- [ ] **T-007** — Duplicatas e itens em revisão (passo 6)
+- [X] **T-007** — Duplicatas e itens em revisão (passo 6)
   - **Atende:** RN-005, RN-010, AMB-007, AMB-008
   - **Aceite:** `RN005_D006D007_EmRevisaoComAlertaCitandoOsDoisIds`, `RN005_D001D002FornecedoresDiferentes_NaoFormamGrupo`, `RN005_D003D004ValoresDiferentes_NaoFormamGrupo`, `RN005_GrupoDeTres_TodosEmRevisaoComAlertaCitandoOsTres`, `RN005_SoOFornecedorDiferente_NaoFormaGrupo`, `RN005_ItemNaoAtivo_NaoParticipaDoGrupo`, `RN010_DuplicataEmRevisao_ZeraValorReembolsavel`, `AMB007_CriterioEhDataCategoriaFornecedorEValor` e `SEC8_IguaisSemNotaAcima100_AmbasRecusadasPorRN004` passam.
   - **Commit:** `<hash preenchido depois>`
