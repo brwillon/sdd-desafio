@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-009 — RN-008 sem exigência de `regras` nem de situação nos testes da T-010 · `2026-10-23`
+
+**Gatilho:** Revisão dos testes da T-010: duas asserções vinham de analogia com a RN-007 e não do texto da RN-008 — `RN-008` ausente de `regras` no d-013 (recusado antes por RN-004) e `Situacao.Aprovado` no d-010.
+
+**O que mudou na spec:** Nada. A spec não foi alterada; as duas asserções foram removidas do teste. A RN-008 continua sem dizer que item já `recusado` ou `em_revisao` não recebe `RN-008`, nem a situação do item limitado.
+
+**Por quê:** O teste deve provar a spec, não o comportamento esperado do código (CLAUDE.md). Fixar essas duas regras exigiria `docs(spec):` antes, como nas D-007 e D-008; a decisão foi não fixá-las agora. A seção 8 e a RN-011 seguem como referência para a precedência e a situação.
+
+**O que isso invalidou:** Nada. O código da T-010 ainda não foi escrito.
+
+**Tasks afetadas:** T-010 (sem mudança de aceite).
+
+**Custo:** Este log e o teste.
+
+---
+
 ## D-008 — RN-007 só avalia itens ativos · `2026-10-23`
 
 **Gatilho:** Revisão dos testes da T-009: nenhum teste do aceite provava que um item já `recusado` (por exemplo, pela RN-004) não consome o saldo diário; a RN-007 só dizia "as despesas que chegam a este passo" e a regra geral estava apenas na seção 8.
