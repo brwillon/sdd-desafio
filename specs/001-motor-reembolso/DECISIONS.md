@@ -10,6 +10,22 @@ Ordem cronológica inversa: a mais recente primeiro.
 
 ---
 
+## D-010 — Exemplo de saída da seção 4: d-004 cita RN-001 e RN-004 · `2026-10-23`
+
+**Gatilho:** Teste `SEC4_SubconjuntoD001D002D004D010_BateComSaidaDaSpec` (T-011): o exemplo da seção 4 dava `regras: ["RN-004"]` para d-004, mas d-004 tem categoria reconhecida e a normalização (passo 3) a determina, como em d-001, d-002 e d-010, que já citam RN-001.
+
+**O que mudou na spec:** Seção 4, exemplo de saída: `regras` de d-004 passa de `["RN-004"]` para `["RN-001", "RN-004"]`. Nenhuma RN foi alterada.
+
+**Por quê:** O exemplo era inconsistente consigo mesmo: citava RN-001 nos itens de categoria reconhecida, exceto em d-004. Cada passo que determina o resultado entra em `regras`, na ordem da seção 8.
+
+**O que isso invalidou:** Nada. O código da T-011 ainda não foi escrito; só o teste SEC4 foi ajustado para a nova lista.
+
+**Tasks afetadas:** T-011 (sem mudança de aceite).
+
+**Custo:** 2 arquivos (spec.md, DECISIONS.md) e 1 asserção do teste.
+
+---
+
 ## D-009 — RN-008 sem exigência de `regras` nem de situação nos testes da T-010 · `2026-10-23`
 
 **Gatilho:** Revisão dos testes da T-010: duas asserções vinham de analogia com a RN-007 e não do texto da RN-008 — `RN-008` ausente de `regras` no d-013 (recusado antes por RN-004) e `Situacao.Aprovado` no d-010.

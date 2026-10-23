@@ -1,6 +1,6 @@
 # Spec — Motor de Cálculo de Reembolso
 
-**Versão:** 1.0 · **Status:** rascunho · **Última alteração:** 2026-10-22
+**Versão:** 1.0 · **Status:** rascunho · **Última alteração:** 2026-10-23
 
 > **Regra de ouro deste arquivo:** ele descreve o QUÊ e o PORQUÊ. Nenhuma linha
 > aqui pode citar linguagem, biblioteca, classe, função ou estrutura de pasta.
@@ -106,7 +106,7 @@ d-010, nesta ordem):
     { "id": "d-004", "categoria": "transporte_urbano", "status": "recusado",
       "valor_solicitado": 100.01, "valor_reembolsavel": 0.00,
       "justificativa": "Valor acima de 100,00 sem nota fiscal.",
-      "regras": ["RN-004"], "alertas": [] },
+      "regras": ["RN-001", "RN-004"], "alertas": [] },
     { "id": "d-010", "categoria": "hospedagem", "status": "aprovado",
       "valor_solicitado": 480.00, "valor_reembolsavel": 250.00,
       "justificativa": "Lançamento conta como uma diária; limite de 250,00; excedente cortado.",
